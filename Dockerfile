@@ -9,6 +9,6 @@ RUN apt-get update && \
     mkdir /opt/zapproxy && \
     cp -Ra zaproxy-2.4.1/* /opt/zapproxy
 EXPOSE 8080
-RUN cd /opt/zapproxy && \
+RUN cd /opt/zapproxy/src && \
     zap.sh -daemon -config api.disablekey=true
 CMD [""]
