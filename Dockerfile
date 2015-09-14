@@ -7,12 +7,13 @@ RUN apt-get update && \
     wget https://github.com/zaproxy/zaproxy/archive/2.4.1.tar.gz && \
     tar -xzvf 2.4.1.tar.gz && \
     mkdir /opt/zapproxy && \
-    pwd && \
+    echo the PWD is
+    echo $PWD && \
+    echo the LIST is
     ls && \
     cp -Ra zaproxy-2.4.1/* /opt/zapproxy
 EXPOSE 8080
-RUN ls && \
-    cd /opt/zapproxy/src && \
-    ls && \
-    zap.sh -daemon -config api.disablekey=true
+RUN echo Running final processes
+    echo $PWD && \
+    sh /opt/zapproxy/src/zap.sh -daemon -config api.disablekey=true
 CMD [""]
