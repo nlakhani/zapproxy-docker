@@ -7,7 +7,7 @@ RUN apt-get update && \
     wget https://github.com/zaproxy/zaproxy/releases/download/2.4.2/ZAP_2.4.2_Linux.tar.gz && \
     tar -xzvf ZAP_2.4.2_Linux.tar.gz && \
     mkdir /opt/zapproxy && \
-    cp -Ra ZAP_2.4.1 /opt/zapproxy
+    cp -Ra ZAP_2.4.2 /opt/zapproxy
 EXPOSE 8080
 RUN cd /opt/zapproxy && \
     sh zap.sh -daemon -config api.disabledkey=true
