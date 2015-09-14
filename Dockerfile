@@ -10,5 +10,5 @@ RUN apt-get update && \
     cp -Ra ZAP_2.4.2/* /opt/zapproxy
 EXPOSE 8080
 RUN cd /opt/zapproxy && \
-    sh zap.sh -daemon -config api.disabledkey=true
+    zap.sh -daemon -config api.disabledkey=true
 CMD [""]
